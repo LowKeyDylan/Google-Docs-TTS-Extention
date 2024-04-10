@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "My Text Reader",
+  "version": "1.0",
+  "description": "A Google Docs extension to read highlighted text aloud.",
+
+  "permissions": ["activeTab", "contextMenus", "storage"],  
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
